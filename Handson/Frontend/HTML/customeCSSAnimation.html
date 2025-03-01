@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 1s infinite;
+            margin-bottom: 50px; 
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-150px);
+            }
+            60% {
+                transform: translateY(-75px);
+            }
+        }
+
+       
+        .logo {
+            font-size: 100px;
+            opacity: 0; 
+            transform: translateY(-50px); 
+            animation: fadeInMove 2s forwards; 
+        }
+
+        @keyframes fadeInMove {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="logo">🌟</div>
+</body>
+</html>

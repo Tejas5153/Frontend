@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Button</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        .btn:active {
+            transform: scale(1.1);
+            background-color: #2980b9;
+        }
+
+        
+        .btn.clicked {
+            animation: buttonPulse 0.5s ease-in-out;
+        }
+
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+            50% {
+                transform: scale(1.2);
+                background-color: #1abc9c;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the Button for Animation</h2>
+    <button class="btn" onclick="animateButton(this)">Click Me</button>
+
+    <script>
+        function animateButton(btn) {
+            btn.classList.add("clicked");
+            setTimeout(() => {
+                btn.classList.remove("clicked");
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>

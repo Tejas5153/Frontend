@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        
+        header {
+            background: linear-gradient(135deg, #c3ff41, #ffa32b);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ff4b2b;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        
+        section {
+            padding: 60px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ffcc00;
+            font-size: 28px;
+        }
+
+        
+        .about {
+            background: #1e1e1e;
+            padding: 60px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.5);
+        }
+
+        
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-box {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
+            width: 150px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.5);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(255, 75, 43, 0.8);
+        }
+
+        
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #ffcc00;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .skills, .projects {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        🚀 My Portfolio 🚀
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Tejas Sonawane! A passionate developer specializing in Java, Web Development, and more.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-box">Java</div>
+            <div class="skill-box">Spring Boot</div>
+            <div class="skill-box">HTML & CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">MySQL</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Java Banking App</h3>
+                <p>A full-stack banking application using Spring Boot and MySQL.</p>
+            </div>
+            <div class="project">
+                <h3>Health Care System</h3>
+                <p>A patient and doctor management system built using Java.</p>
+            </div>
+            <div class="project">
+                <h3>Ganapati Mandal System</h3>
+                <p>A web-based system for managing Ganapati festival records.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 Tejas Sonawane. All rights reserved.
+    </footer>
+
+</body>
+</html>
