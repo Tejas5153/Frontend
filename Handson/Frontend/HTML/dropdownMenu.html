@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 10px 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+      
+        li:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            display: none;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .dropdown li {
+            display: block;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .dropdown a {
+            display: block;
+            width: 100%;
+        }
+
+        
+        .dropdown-menu:hover .dropdown {
+            display: block;
+        }
+
+        
+        .dropdown-menu a::after {
+            content: " ▼";
+            font-size: 14px;
+        }
+
+        
+        .dropdown li:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown-menu">
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">SEO Optimization</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

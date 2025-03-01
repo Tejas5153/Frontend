@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+       
+        .parallax {
+            background-image: url('img1.webp'); 
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        
+        .content {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+            font-size: 18px;
+            color: #333;
+        }
+
+        
+        .parallax-second {
+            background-image: url('img2.webp'); 
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax">Welcome to the Parallax Effect</div>
+
+    <div class="content">
+        <h2>About Parallax Scrolling</h2>
+        <p>Parallax scrolling is a web design technique where background content moves at a different speed than foreground content, creating an immersive scrolling experience.</p>
+    </div>
+
+    <div class="parallax-second">Another Layer of Parallax</div>
+
+    <div class="content">
+        <h2>Why Use Parallax?</h2>
+        <p>It adds depth and engagement to your website, making it visually appealing and interactive.</p>
+    </div>
+
+</body>
+</html>

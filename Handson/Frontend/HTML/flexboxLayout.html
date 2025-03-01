@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+       
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            flex: 1; /* Makes the content area grow and push footer to the bottom */
+            padding: 20px;
+        }
+
+        
+        
+        .column {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+     
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Flexbox Layout Example
+    </header>
+
+    <div class="container">
+        <div class="column">Left Column</div>
+        <div class="column">Center Column</div>
+        <div class="column">Right Column</div>
+    </div>
+
+    <footer>
+        © 2025 Tejas Sonawane. All rights reserved.
+    </footer>
+
+</body>
+</html>
